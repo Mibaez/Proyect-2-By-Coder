@@ -1,150 +1,70 @@
-/* Estilos de Index */
-body {
-    font-family: 'Oswald', sans-serif; /* Usando la fuente Oswald */
-    background-color: #2c2c2c; /* Color de fondo oscuro */
-    color: #fff; /* Color de texto principal */
+/* Estilos Generales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-header {
-    background-color: #1a1a1a; /* Color de encabezado oscuro */
-    padding: 12px 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 10px;
-    padding: 0 10px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffd700; /* Color de texto dorado */
-}
-
-.search-container {
+body {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    margin-right: 10px;
-    background-color: #fff; /* Color de fondo blanco para el campo de entrada */
-    color: #2c2c2c; /* Color de texto oscuro */
-    border: 2px solid #ffd700; /* Borde dorado */
-}
-
-input[type="text"]::placeholder {
-    color: #2c2c2c; /* Color de texto de marcador de posición oscuro */
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    background-color: #ffd700; /* Color de botón dorado */
-    color: #2c2c2c; /* Color de texto oscuro */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: 2px solid #ffd700; /* Borde dorado */
-}
-
-button:hover {
-    background-color: #e6ac00; /* Cambio de color al pasar el cursor */
-}
-
-.main-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 70vh;
+    min-height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to right, #cb232c, #ce1d61) 
 }
 
-#results {
-    max-width: 800px;
-    margin-top: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #fff; /* Color de fondo blanco para resaltar los resultados */
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 2px solid #ffd700; /* Borde dorado */
-}
-
-li:hover {
-    background-color: #f0f0f0; /* Cambio de color al pasar el cursor */
-}
-.footer {
-    font-size: 12px;
+form {
     display: flex;
-    justify-content: center;
-    align-items: center; /* Centrar verticalmente */
-    color: #ffd700; /* Color de texto dorado */
-    background-color: #1a1a1a; /* Color de footer oscuro */
-    padding: 7px;
-    position: fixed; /* Fijar el footer */
-    bottom: 0; /* Colocar en la parte inferior */
-    width: 100%; /* Ancho completo */
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow:0 5px 10px rgba(71, 3, 6, 0.7) ;
 }
 
-
-/* Estilos para login.html */
-
-input[type="text"],
-input[type="password"] {
-    width: calc(80% - 40px); 
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    background-color: #fff; /* Color de fondo blanco para los campos de entrada */
-    color: #2c2c2c; /* Color de texto oscuro */
-    border: 2px solid #ffd700; /* Borde dorado */
-    margin-left: 50px; /* Centrar el campo de entrada */
-    margin-right: 50px; /* Centrar el campo de entrada */
+form .title{
+    color: #252525;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
 
-button[type="submit"] {
-    width: 100px; /* Ancho más pequeño */
-    padding: 8px 16px; /* Tamaño de padding más pequeño para ajustarse al botón más pequeño */
-    font-size: 1rem;
+form label {
+    margin-bottom: 35px;
+}
+
+form label input {
+    outline: none;
     border: none;
-    border-radius: 20px;
-    background-color: #ffd700; /* Color de botón dorado */
-    color: #2c2c2c; /* Color de texto oscuro */
+    color: #252525;
+    border-bottom: solid 1px #ce1d61;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+form .link  {
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+form button {
+    color: #fff;
+    border: none;
+    background: linear-gradient(to right, #cb232c, #ce1d61);
+    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición para el cambio de color */
-    border: 2px solid #ffd700; /* Borde dorado */
-    margin-left: auto;
-    margin-right: auto; 
+    font-size: 20px;
 }
 
-button[type="submit"]:hover {
-    background-color: #e6ac00; /* Cambio de color al pasar el cursor */
-}
-
-/* Estilos para el enlace dentro de .readme */
-.readme {
-    color: #ffd700; /* Color amarillo */
-    text-decoration: none; /* Quitar subrayado del enlace */
-    float: right; /* Alinear a la derecha */
-    margin-top: 10px; /* Espacio superior */
-    margin-right: 10px; /* Espacio derecho */
+footer.footer {
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    background-color: none;
+    color: #252525;
+    text-align: center;
+    padding: 15px 0; 
 }
