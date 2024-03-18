@@ -57,7 +57,7 @@ form button {
     cursor: pointer;
     font-size: 20px;
 }
-
+/*Footer generales*/
 footer.footer {
     position: fixed; 
     left: 0;
@@ -67,4 +67,26 @@ footer.footer {
     color: #252525;
     text-align: center;
     padding: 15px 0; 
+}
+/*Estilos para el header de las paginas 2 y 3*/
+.header {
+    position: fixed; /* Para mantener el encabezado en la parte superior */
+    top: 0;
+    right: 0;
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: transparent; /* Color de fondo transparente */
+}
+
+.link2 {
+    color: black; /* Color de texto negro */
+    text-decoration: none; /* Sin subrayado */
+    margin-left: 20px; /* Espacio entre enlaces */
+}
+
+.titulo2 {
+    color: #fff; /* Color de texto blanco */
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    text-align: left; /* Alineado a la izquierda */
+    margin-top: 20px; /* Espacio superior */
+    margin-left: 20px; /* Espacio izquierdo */
 }
