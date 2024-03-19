@@ -20,7 +20,7 @@ form {
     flex-direction: column;
     background: #fff;
     text-align: center;
-    padding: 20px 25px;
+    padding: 40px 50px;
     box-shadow:0 5px 10px rgba(71, 3, 6, 0.7) ;
 }
 
@@ -72,9 +72,9 @@ footer.footer {
 .header {
     position: fixed; /* Para mantener el encabezado en la parte superior */
     top: 0;
-    right: 0;
+    left: 0; /* Posiciona el encabezado en la esquina superior izquierda */
     padding: 10px 20px; /* Espaciado interno */
-    background-color: transparent; /* Color de fondo transparente */
+    background-color: transparent;
 }
 
 .link2 {
@@ -84,9 +84,36 @@ footer.footer {
 }
 
 .titulo2 {
-    color: #fff; /* Color de texto blanco */
-    font-size: 2.5rem; /* Tamaño de fuente más grande */
-    text-align: left; /* Alineado a la izquierda */
-    margin-top: 20px; /* Espacio superior */
-    margin-left: 20px; /* Espacio izquierdo */
+    color: #fff; 
+    font-size: 1.5rem; 
+    text-align: right; 
+    margin-left: 10px; 
+}
+
+/*Logo Wonka*/
+.logo {
+    position: fixed; /* Posición fija para mantenerlo en la esquina */
+    top: 0; /* Alinea el logo en la parte superior */
+    right: 0; /* Alinea el logo en la parte derecha */
+    margin: 20px; /* Margen opcional para espacio desde el borde */
+    z-index: 1000; /* Z-index para asegurar que esté por encima de otros elementos */
+}
+
+.brand img {
+    max-width: 150px; /* Ancho máximo de la imagen */
+    max-height: 150px; /* Altura máxima de la imagen */
+}
+
+/* Box de pagina Search*/
+#searchInput {
+    width: 300px; /* Ancho del input */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 2px solid #ccc; /* Borde del input */
+    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+    outline: none; /* Elimina el contorno al enfocar */
+}
+
+#searchInput::placeholder {
+    color: #999; /* Color del texto de marcador de posición */
 }
