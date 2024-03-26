@@ -1,18 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
-    const button = document.getElementById('button');
+    // Declaración de variables
+    let usernameInput = document.getElementById('username');
+    let passwordInput = document.getElementById('password');
+    let button = document.getElementById('button');
 
-    if (username && password && button) {
-        button.addEventListener('click' , (e) => {
+    // Declaración de un array
+    const usuariosAutorizados = [
+        { username: 'mibaez@arcor.com', password: '12345' },
+        { username: 'usuario2@example.com', password: '54321' }
+    ];
+
+    if (usernameInput && passwordInput && button) {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
             const data = {
-                username: username.value,
-                password: password.value
+                username: usernameInput.value,
+                password: passwordInput.value
             };
 
             // Verificar las credenciales
-            if (data.username === 'mibaez@arcor.com' && data.password === '12345') {
+            const usuarioValido = usuariosAutorizados.find(usuario => usuario.username === data.username && usuario.password === data.password);
+
+            if (usuarioValido) {
                 // Mostrar confirmación antes de redirigir
                 const confirmation = confirm('¿Estás seguro de que deseas continuar?');
                 
