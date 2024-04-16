@@ -1,19 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Declaración de variables
+    // Obtener referencia al botón de búsqueda
     const searchButton = document.getElementById('searchButton');
 
     // Declaración de un array
     let jsonData = [];
 
-    searchButton.addEventListener('click', buscarProducto);
+    // Agregar un event listener al botón de búsqueda
+    searchButton.addEventListener('click', () => {
+        buscarProducto();
+    });
 });
 
 function buscarProducto() {
-    // Declaración de variables
+    // Obtener referencia al input de búsqueda y al div de resultados
     const inputValor = document.getElementById('searchInput').value.toLowerCase();
     const resultadosDiv = document.getElementById('results');
 
-    resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
+    // Limpiar resultados anteriores
+    resultadosDiv.innerHTML = '';
 
     // Declaración de una constante
     const archivo = "./data.xlsx"; // Nombre del archivo xlsx
@@ -44,6 +48,7 @@ function buscarProducto() {
                 resultadosDiv.innerHTML += productoHTML;
             });
         } else {
+            // Mostrar mensaje si no hay resultados
             resultadosDiv.innerHTML = '<p>La búsqueda no arroja resultados</p>';
         }
     };
